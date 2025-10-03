@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Figtree";
   src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format(truetype);
+  font-display: swap;
 }
 
 :root {
@@ -130,7 +131,7 @@ main {
   color: var(--color-gray-950);
 }
 /* Footer with attribution */
-footer {
+.footer {
   padding: 1rem;
   text-align: center;
 }
