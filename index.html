@@ -12,13 +12,14 @@
 
 <body>
   <main>
-    <article class="card">
-      <img class="blog-img" src="./assets/images/illustration-article.svg" alt="">
+    <article class="card" aria-label="Blog preview card: HTML & CSS Foundamentals">
+      <img class="blog-img" src="./assets/images/illustration-article.svg"
+        alt="Decorative illustrations showing coding symbols: closing HTML tag and curly braces">
       <div class="content">
-        <span class="category">Learning</span>
-        <p class="publish-date">Published 21 Dec 2023</p>
+        <span class="category" aria-label="Category: Learning">Learning</span>
+        <time class="publish-date" datetime="2023-12-21">Published 21 Dec 2023</time>
         <h1>
-          <a href="#" class="card-link-title">
+          <a href="#" class="card-link-title" aria-label="Read more about HTML & CSS foundations">
             HTML & CSS foundations
           </a>
         </h1>
@@ -26,20 +27,21 @@
           presentation.</p>
       </div>
 
-      <div class="author">
-        <img class="user-pic" src="./assets/images/image-avatar.webp" alt="">
+      <div class="author" aria-label="Written by Greg Hooper">
+        <img class="user-pic" src="./assets/images/image-avatar.webp" alt="Profile picture of Greg Hooper">
         <p class="author-name">Greg Hooper</p>
       </div>
     </article>
   </main>
 
-  <footer>
+  <footer aria-label="Challenge attribution information">
     <p class="attribution">
-      Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge"
-        target="_blank">Frontend Mentor</a>
+      Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        rel="noopener noreferrer" aria-label="Visit Frontend Mentor website (opens in new window)">Frontend Mentor</a>
     </p>
     <p class="attribution">
-      Coded by <a class="attribution-link" href="https://www.github.com/amansgz" target="_blank">@amansgz</a>
+      Coded by <a class="attribution-link" href="https://www.github.com/amansgz" target="_blank"
+        rel="noopener noreferrer" aria-label="Visit amansgz Github profile (opens in new window)">@amansgz</a>
     </p>
   </footer>
 
