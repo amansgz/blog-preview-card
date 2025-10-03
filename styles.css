@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Figtree";
   src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format(truetype);
+  font-display: swap;
 }
 
 :root {
@@ -11,22 +12,23 @@
   --color-white: hsl(0, 0%, 100%);
 
   /* Fonts */
-  --fs-sm: 14px;
-  --fs-md: 16px;
-  --fs-lg: 24px;
+  --fs-sm: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem); /* 12px - 14px */
+  --fs-md: clamp(0.875rem, 0.8rem + 0.375vw, 1rem); /* 14px - 16px */
+  --fs-lg: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem); /* 20px -24px */
+
   --fw-medium: 500;
   --fw-extra-bold: 800;
 
   /* Spacing */
-  --spacing-300: 24px;
-  --spacing-150: 12px;
-  --spacing-100: 8px;
-  --spacing-50: 4px;
+  --spacing-50: 0.25rem; /* 4px */
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-300: 1.5rem; /* 24px */
 
   /* Border Radius */
-  --border-radius-sm: 4px;
-  --border-radius-md: 10px;
-  --border-radius-lg: 20px;
+  --border-radius-sm: 0.25rem; /* 4px */
+  --border-radius-md: 0.625rem; /* 10px */
+  --border-radius-lg: 1.25rem; /* 20px */
 }
 
 *,
@@ -55,11 +57,16 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-300);
-  max-width: min(387px, 90vw);
+  max-width: min(390px, 90vw);
   padding: var(--spacing-300);
   background-color: var(--color-white);
   border-radius: var(--border-radius-lg);
   box-shadow: 8px 8px 0 var(--color-gray-950), 0 0 0 1px var(--color-gray-950);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-150);
 }
 .blog-img {
   display: block;
@@ -79,21 +86,28 @@ main {
 .publish-date {
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
+  line-height: 1.5;
   color: var(--color-gray-950);
 }
 
-.card-link {
+.card-link-title {
   text-decoration: none;
   font-size: var(--fs-lg);
   font-weight: var(--fw-extra-bold);
   line-height: 1.5;
   color: var(--color-gray-950);
   cursor: pointer;
-  transition: color 0.1s ease;
+  transition: all 0.2s ease;
 }
-.card-link:hover,
-.card-link:focus {
+.card-link-title:hover {
   color: var(--color-yellow);
+}
+.card-link-title:focus {
+  outline: 2px solid var(--color-gray-950);
+  background-color: var(--color-yellow);
+  outline-offset: 4px;
+  border-radius: var(--border-radius-sm);
+  color: var(--color-gray-950);
 }
 .text {
   font-size: var(--fs-md);
@@ -117,21 +131,27 @@ main {
   color: var(--color-gray-950);
 }
 /* Footer with attribution */
-footer {
+.footer {
   padding: 1rem;
   text-align: center;
 }
 .attribution {
   font-size: var(--fs-sm);
-  color: var(--color-gray-500);
+  color: var(--color-gray-950);
+  margin-bottom: var(--spacing-50);
 }
 .attribution-link {
   text-decoration: none;
-  color: var(--color-gray-500);
-  cursor: pointer;
-  transition: color 0.1s ease;
-}
-.attribution-link:hover,
-.attribution-link:focus {
   color: var(--color-gray-950);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.attribution-link:hover {
+  text-decoration: underline;
+}
+.attribution-link:focus {
+  outline: 2px solid var(--color-gray-950);
+  box-shadow: 0 0 0 2px var(--color-yellow);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
 }
