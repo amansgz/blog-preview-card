@@ -96,11 +96,17 @@ main {
   line-height: 1.5;
   color: var(--color-gray-950);
   cursor: pointer;
-  transition: color 0.1s ease;
+  transition: all 0.2s ease;
 }
-.card-link-title:hover,
-.card-link-title:focus {
+.card-link-title:hover {
   color: var(--color-yellow);
+}
+.card-link-title:focus {
+  outline: 2px solid var(--color-gray-950);
+  background-color: var(--color-yellow);
+  outline-offset: 4px;
+  border-radius: var(--border-radius-sm);
+  color: var(--color-gray-950);
 }
 .text {
   font-size: var(--fs-md);
@@ -130,15 +136,21 @@ footer {
 }
 .attribution {
   font-size: var(--fs-sm);
-  color: var(--color-gray-500);
+  color: var(--color-gray-950);
+  margin-bottom: var(--spacing-50);
 }
 .attribution-link {
   text-decoration: none;
-  color: var(--color-gray-500);
-  cursor: pointer;
-  transition: color 0.1s ease;
-}
-.attribution-link:hover,
-.attribution-link:focus {
   color: var(--color-gray-950);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.attribution-link:hover {
+  text-decoration: underline;
+}
+.attribution-link:focus {
+  outline: 2px solid var(--color-gray-950);
+  box-shadow: 0 0 0 2px var(--color-yellow);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
 }
