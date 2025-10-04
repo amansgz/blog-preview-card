@@ -33,10 +33,22 @@ Part of the [Responsive Learning Path](https://www.frontendmentor.io/learning-pa
 
 ## 📚 What I Learned
 
+### Development Workflow
+
+- **Figma to Code**: Learning to extract accurate measurements, colors and spacing from design files.
+- **Git Best Practices**: Using descriptive branch names and commit messages for better collaboration.
+
+### Web Accessibility
+
+- **Semantic HTML**: Proper use of `<time datetime="">
+` for dates and meaningful HTML structure
+- **Reduced motion**: Implementing `prefers-reduced-motion` for users with motion sensitivity
+- **Focus Management**: Creating accessible focus states with proper contrast and outline offsets
+- **Screen reader support**: Using `role="text` for better text content announcement
+
 ### CSS Techniques & Tricks
 
-**Multiple Box Shadows for Borders**:
-Used the `box-shadow` property with multiple values to create separate borders without affecting the element's layout.
+- **Multiple Box Shadows for Borders**: Used the `box-shadow` property with multiple values to create separate borders without affecting the element's layout.
 
 ## 👩‍💻 Author
 
