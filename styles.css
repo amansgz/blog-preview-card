@@ -23,7 +23,10 @@
   --spacing-50: 0.25rem; /* 4px */
   --spacing-100: 0.5rem; /* 8px */
   --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 0.875rem; /* 14px */
   --spacing-300: 1.5rem; /* 24px */
+
+  --spacing-responsive: clamp(0.75rem, 1.5vw, 1.25rem);
 
   /* Border Radius */
   --border-radius-sm: 0.25rem; /* 4px */
@@ -50,14 +53,14 @@ main {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  padding: 1rem;
+  padding: var(--spacing-responsive);
 }
 /* Blog Preview Card */
 .card {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-300);
-  max-width: min(390px, 90vw);
+  max-width: min(24.187rem, 90vw);
   padding: var(--spacing-300);
   background-color: var(--color-white);
   border-radius: var(--border-radius-lg);
@@ -117,7 +120,7 @@ main {
 }
 .author {
   display: flex;
-  gap: 1rem;
+  gap: var(--spacing-200);
 }
 .user-pic {
   width: 32px;
@@ -132,13 +135,15 @@ main {
 }
 /* Footer with attribution */
 .footer {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  padding: var(--spacing-responsive);
   text-align: center;
 }
 .attribution {
   font-size: var(--fs-sm);
   color: var(--color-gray-950);
-  margin-bottom: var(--spacing-50);
 }
 .attribution-link {
   text-decoration: none;
@@ -154,4 +159,10 @@ main {
   box-shadow: 0 0 0 2px var(--color-yellow);
   outline-offset: 2px;
   border-radius: var(--border-radius-sm);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-link-title,
+  .attribution-link {
+    transition-duration: 0.01ms;
+  }
 }
